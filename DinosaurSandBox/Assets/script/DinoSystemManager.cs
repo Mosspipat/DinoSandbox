@@ -62,7 +62,7 @@ public class DinoSystemManager : MonoBehaviour {
         boxPoint.transform.position = new Vector3(Input.mousePosition.x,Input.mousePosition.y,-100f);
 
         Debug.DrawRay(boxPoint.transform.position,boxPoint.transform.forward*100f,Color.red);
-        RemoveSand();
+        /*RemoveSand();*/
         CheckDigging();
 
         testTextComplete.text = "all is :" + ((sandCoverFossil * 100)/maxCoverFossil + "." + (sandCoverFossil * 100)%maxCoverFossil + " % ");
@@ -71,7 +71,7 @@ public class DinoSystemManager : MonoBehaviour {
     }
             
     #region Method Erease/remove sand
-    void RemoveSand()
+    /*void RemoveSand()
     {
         RaycastHit hitOBJ;
         if (Input.GetMouseButton(0) && Physics.Raycast(boxPoint.transform.position,boxPoint.transform.forward,out hitOBJ,Mathf.Infinity,layerSand))
@@ -103,7 +103,7 @@ public class DinoSystemManager : MonoBehaviour {
             }
             //imagePaticle.transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         }
-    }
+    }*/
     #endregion
 
     #region checkListFossil
@@ -143,7 +143,6 @@ public class DinoSystemManager : MonoBehaviour {
             buttonRestart.transform.DOScale(1f, 1f);
             timeCount = 0;
         }
-
         //show dialog
         foreach(Transform allAlphaChild in alphaChildDialog)
         {
